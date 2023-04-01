@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool) # True
 
-ALLOWED_HOSTS = ['greatkart-course-env.eba-pepcery4.us-west-2.elasticbeanstalk.com', "*"]
+ALLOWED_HOSTS = ['django-dd-env.eba-ecvfxjnc.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
@@ -64,7 +64,7 @@ SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
 SESSION_TIMEOUT_REDIRECT = 'accounts/login'
 
 
-ROOT_URLCONF = 'greatkart.urls'
+ROOT_URLCONF = 'dd.urls'
 
 TEMPLATES = [
     {
@@ -84,7 +84,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'greatkart.wsgi.application'
+WSGI_APPLICATION = 'dd.wsgi.application'
 
 AUTH_USER_MODEL = 'accounts.Account'
 
@@ -147,16 +147,17 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
+#Static files (CSS, JavaScript, Images)
+#https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+"""
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR /'static'
 
-# STATIC_URL = '/static/'
-# STATIC_ROOT = BASE_DIR /'static'
-# STATICFILES_DIRS = [
-#     'greatkart/static',
-# ]
-
+STATICFILES_DIRS = [
+     'dd/static',
+ ]
+"""
 # AWS S3 Static Files Configuration
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
@@ -170,12 +171,12 @@ AWS_DEFAULT_ACL = 'public-read'
 AWS_LOCATION = 'static'
 
 STATICFILES_DIRS = [
-    'greatkart/static',
+    'dd/static',
 ]
-STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATIC_URL = '/static/'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-DEFAULT_FILE_STORAGE = 'greatkart.media_storages.MediaStorage'
+DEFAULT_FILE_STORAGE = 'dd.media_storages.MediaStorage'
 
 # media files configuration
 MEDIA_URL = '/media/'
@@ -194,3 +195,5 @@ EMAIL_PORT = config('EMAIL_PORT', cast=int)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
+
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'

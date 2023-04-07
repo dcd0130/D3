@@ -1,32 +1,78 @@
-
-
 {% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
 
-
-
-<!-- ========================= SECTION MAIN ========================= -->
+<!-- ========================= SECTION MAIN ========================= -->	
 <section class="section-intro padding-y-sm">
+	<div class="container">
+	  <div class="intro-banner-wrap position-relative">
+		<img src="{% static 'images/banners/4.jpg' %}" class="img-fluid rounded">
+		<div class="intro-content position-absolute top-50 start-50 translate-middle">
+		  <h1 class="intro-title">D3</h1>
+		  <p class="intro-text">Ready for your next adventure. We have your perfect travel companion for you.</p>
+		  <div class="intro-buttons">
+			<a href="{% url 'store' %}" class="btn btn-outline-primary float-right">Shop Now</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container">
+		<div class="intro-banner-wrap position-relative">
+		  <img src="{% static 'images/banners/22.jpg' %}" class="img-fluid rounded">
+		  <div class="intro-content position-absolute top-50 start-50 translate-middle text-center">
+			<p class="intro-text-dark">At D3 we believe that sustainability is not just a trend, but a way of life. That's why we are constantly seeking out new ways to minimize our environmental impact and promote sustainable practices. We are excited to share our passion for sustainable fashion with you, and we hope that you will join us in our mission to make the world a more sustainable place.</p>
+		  </div>
+		</div>
+	</div>
+
+	  <div class="container">
+		<div class="row align-items-center">
+		  <div class="col-lg-6">
+			<img src="{% static 'images/banners/10.jpg' %}" class="img-fluid rounded">
+		  </div>
+		  <div class="col-lg-6">
+			  <h2 class="intro-title-dark">Our Values</h2>
+			  <p class="intro-text-dark">Sustainability<br>Quality<br>Innovation</p>
+		  </div>
+		</div>
+	  </div>
+	  
+  
+	<div class="container">
+	  <div class="row align-items-center">
+		<div class="col-lg-6">
+			<h2 class="intro-title-dark">Cork Fabric</h2>
+			<p class="intro-text-dark">Eco-Friendly<br>Durable<br>Hypoallergenic</p></div>
+		<div class="col-lg-6">
+		  <img src="{% static 'images/banners/6.jpg' %}" class="img-fluid rounded">
+		</div>
+	  </div>
+	</div>
+  </section>
+
 <div class="container">
-
-<div class="intro-banner-wrap">
-	<img src="{% static 'images/banners/cover.jpg' %}" class="img-fluid rounded">
-</div>
-
-</div> <!-- container //  -->
-</section>
+	<div class="row align-items-center">
+	  <div class="col-lg-6">
+		<img src="{% static 'images/banners/9.jpg' %}" class="img-fluid rounded">
+	  </div>
+	  <div class="col-lg-6">
+		  <h2 class="intro-title-dark">Our Promise</h2>
+		  <p class="intro-text-dark">For every backpack we sell we <br>promise to plant a tree in your name.</p>
+	  </div>
+	</div>
+  </div>
 <!-- ========================= SECTION MAIN END// ========================= -->
 
-<!-- ========================= SECTION  ========================= -->
+<!-- ========================= SECTION See Products (not needed at the moment)========================= 
 <section class="section-name padding-y-sm">
 <div class="container">
 
 <header class="section-heading">
 	<a href="{% url 'store' %}" class="btn btn-outline-primary float-right">See all</a>
-	<h3 class="section-title">Popular products</h3>
-</header><!-- sect-heading -->
+	<h3 class="section-title">Hello</h3>
+</header> 
 
 
 <div class="row">
@@ -36,7 +82,7 @@
 			<a href="{{ product.get_url }}" class="img-wrap"> <img src="{{ product.images.url }}"> </a>
 			<figcaption class="info-wrap">
 				<a href="{{ product.get_url }}" class="title">{{ product.product_name }}</a>
-				<div class="price mt-1">$ {{ product.price }}</div> <!-- price-wrap.// -->
+				<div class="price mt-1">$ {{ product.price }}</div> 
 				<div class="rating-star">
 					<span>
 						<i class="fa fa-star{% if product.averageReview < 0.5 %}-o{% elif product.averageReview >= 0.5 and product.averageReview < 1 %}-half-o {% endif %}" aria-hidden="true"></i>
@@ -48,12 +94,13 @@
 				</div>
 			</figcaption>
 		</div>
-	</div> <!-- col.// -->
+	</div> 
 	{% endfor %}
-</div> <!-- row.// -->
+</div> 
 
-</div><!-- container // -->
+</div>
 </section>
+-->
 <!-- ========================= SECTION  END// ========================= -->
 
 

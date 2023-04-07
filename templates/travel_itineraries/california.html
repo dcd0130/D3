@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ========================= SECTION PAGETOP ========================= -->
+<section class="section-pagetop bg">
+    <div class="container">
+        {% if 'search' in request.path %}
+            <h2 class="title-page">Search Result</h2>
+        {% else %}
+        <div class="intro-banner-wrap position-relative">
+            <img src="{% static 'images/banners/5.jpg' %}" class="img-fluid rounded">
+            <div class="intro-content position-absolute top-50 start-50 translate-middle">
+              <h1 class="intro-title-dark">Our Store</h1>
+            </div>
+        {% endif %}
+    
+    </div> <!-- container //  -->
+    </section>
+    <!-- ========================= SECTION INTRO END// ========================= -->
+    

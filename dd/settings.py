@@ -27,8 +27,8 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool) # True
 
-ALLOWED_HOSTS = ['django-dd-env.eba-ecvfxjnc.us-west-2.elasticbeanstalk.com']
-
+#ALLOWED_HOSTS = ['django-dd-env.eba-ecvfxjnc.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'orders',
     'admin_honeypot',
     'storages',
+    'travel_itineraries',
 ]
 
 MIDDLEWARE = [
@@ -83,6 +84,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'dd.wsgi.application'
 
@@ -137,20 +139,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
-
 
 #Static files (CSS, JavaScript, Images)
 #https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-"""
+
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR /'static'
 
@@ -169,7 +166,7 @@ AWS_S3_OBJECT_PARAMETERS = {
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = 'public-read'
 AWS_LOCATION = 'static'
-
+"""
 STATICFILES_DIRS = [
     'dd/static',
 ]

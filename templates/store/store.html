@@ -8,7 +8,11 @@
 	{% if 'search' in request.path %}
 		<h2 class="title-page">Search Result</h2>
 	{% else %}
-		<h2 class="title-page">Our Store</h2>
+	<div class="intro-banner-wrap position-relative">
+		<img src="{% static 'images/banners/5.jpg' %}" class="img-fluid rounded">
+		<div class="intro-content position-absolute top-50 start-50 translate-middle">
+		  <h1 class="intro-title-dark">Our Store</h1>
+		</div>
 	{% endif %}
 
 </div> <!-- container //  -->
@@ -20,8 +24,8 @@
 <div class="container">
 
 <div class="row">
-	<aside class="col-md-3">
-
+	<aside class="col-md-12">
+<!--
 <div class="card">
 	<article class="filter-group">
 		<header class="card-header">
@@ -40,13 +44,13 @@
 					{% endfor %}
 				</ul>
 
-			</div> <!-- card-body.// -->
+			</div> 
 		</div>
-	</article> <!-- filter-group  .// -->
+	</article> 
 
-</div> <!-- card.// -->
+</div> 
 
-	</aside> <!-- col.// -->
+	</aside>
 	<main class="col-md-9">
 
 <header class="border-bottom mb-4 pb-3">
@@ -54,8 +58,8 @@
 			<span class="mr-md-auto"><b>{{ product_count }}</b> items found </span>
 
 		</div>
-</header><!-- sect-heading -->
-
+</header>
+-->
 <div class="row">
 	{% if products %}
 	{% for product in products %}

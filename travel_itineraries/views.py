@@ -10,3 +10,4 @@ def hawaii(request):
 
 def california(request):
     return render(request, 'california.html')
+

@@ -31,25 +31,16 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-2 col-md-3 col-6">
-              <a href="./" class="brand-wrap">
+              <a href="/" class="brand-wrap">
                 <img class="logo" src="{% static './images/d3.png' %}">
               </a> <!-- brand-wrap.// -->
             </div>
-      
-            <script>
-                const logo = document.querySelector('.logo');
-                logo.addEventListener('click', () => {
-                  console.log('Logo clicked'); // Add this line to check if the code is executing properly
-                  window.location.href = "{% url 'home' %}";
-                });
-              </script>
-              
-      
+         
             <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-              <a href="{% url 'store' %}" class="btn btn-outline-primary">Store</a>
-              <a href="{% url 'travel_itinerary_list' %}" class="btn btn-outline-primary">Travel Itineraries</a>
+              <a href="{% url 'store' %}" class="btn btn-outline-primary custom-btn">Store</a>
+              <a href="{% url 'travel_itinerary_list' %}" class="btn btn-outline-primary custom-btn">Travel Itineraries</a>
             </div>
-      
+
             <div class="col-lg-4 col-md-3 col-sm-6 col-6 order-2 order-lg-3">
               <div class="d-flex justify-content-end mb-3 mb-lg-0">
                 <div class="widget-header">

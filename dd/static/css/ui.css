@@ -1529,4 +1529,10 @@ a[class*=card]:hover .title {
   display: block;
 }
 
+
+/* ================ Customized Boxes ================== */
+.custom-btn {
+  width: 50%; /* adjust this value to your desired width */
+}
+
 /*# sourceMappingURL=ui.css.map */

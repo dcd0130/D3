@@ -36,12 +36,14 @@
               </a> <!-- brand-wrap.// -->
             </div>
          
-            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-              <a href="{% url 'store' %}" class="btn btn-outline-primary custom-btn">Store</a>
-              <a href="{% url 'travel_itinerary_list' %}" class="btn btn-outline-primary custom-btn">Travel Itineraries</a>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+              <div style="display: flex; flex-direction: row;">
+                <a href="{% url 'store' %}" class="btn btn-outline-primary custom-btn">Store</a>
+                <a href="{% url 'travel_itinerary_list' %}" class="btn btn-outline-primary custom-btn" style="margin-left:10px;">Travel Itineraries</a>
+              </div>
             </div>
-
-            <div class="col-lg-4 col-md-3 col-sm-6 col-6 order-2 order-lg-3">
+            
+            <div class="col-lg-4 col-md-4 col-sm-6 col-6 order-2 order-lg-3 ml-auto">
               <div class="d-flex justify-content-end mb-3 mb-lg-0">
                 <div class="widget-header">
                   <small class="title text-muted">Welcome guest!</small>
@@ -54,11 +56,9 @@
                   <div class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></div>
                   <span class="badge badge-pill badge-danger notify">0</span>
                 </a>
-              </div> <!-- widgets-wrap.// -->
-            </div> <!-- col.// -->
+              </div>
+            </div>           
           </div> <!-- row.// -->
         </div> <!-- container.// -->
-      </section> <!-- header-main .// -->
-                
-    
+      </section> <!-- header-main .// -->      
     </header> <!-- section-header.// -->
